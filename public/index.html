@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.22.0/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.22.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.22.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.22.0/firebase-firestore.js"></script>
+
+    <script>
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      var firebaseConfig = {
+        apiKey: "AIzaSyD4wPyRVhwgYOGaigzoDYy4YOWnVgyAoNk",
+        authDomain: "learning-firebase-4d2d0.firebaseapp.com",
+        databaseURL: "https://learning-firebase-4d2d0.firebaseio.com",
+        projectId: "learning-firebase-4d2d0",
+        storageBucket: "learning-firebase-4d2d0.appspot.com",
+        messagingSenderId: "951116196512",
+        appId: "1:951116196512:web:da101a4297eced13a7f7c5",
+        measurementId: "G-6K6JVGW162",
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Faker/3.1.0/faker.min.js"></script>
+
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <h1>My Awesome App</h1>
+
+    <section id="whenSignedOut">
+      <button id="signInBtn">Sign in with Google</button>
+    </section>
+
+    <section id="whenSignedIn" hidden="true">
+      <div id="userDetails"></div>
+      <button id="signOutBtn">Sign Out</button>
+    </section>
+
+    <section>
+      <ul id="thingsList"></ul>
+      <button id="createThing">Create Random Thing</button>
+    </section>
+  </body>
+</html>
